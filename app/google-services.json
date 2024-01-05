@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "714210809461",
+    "project_id": "winery-guide-app",
+    "storage_bucket": "winery-guide-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:714210809461:android:87e802856449ad28f00a3c",
+        "android_client_info": {
+          "package_name": "com.example.wineryguideapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAh2yg_DJ9RVv97N9_kqlkbiflvBgOCXIQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

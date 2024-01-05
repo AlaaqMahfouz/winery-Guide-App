@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".homePageWindow">
+
+
+
+
+    <ImageView
+        android:id="@+id/clickableImage1"
+        android:layout_width="330dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:contentDescription="@string/bla"
+        />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="70dp"
+        android:layout_height="40dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="150dp"
+        android:elevation="1dp"
+        android:text=""
+        android:textColor="@color/closeToWhite"
+        android:textSize="25sp" />
+
+
+    <LinearLayout
+        android:id="@id/LL"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        >
+
+        <TextView
+            android:id="@+id/Winery1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textSize="13dp"
+            android:textColor="@color/closeToWhite"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/Winery2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textSize="13dp"
+            android:textColor="@color/closeToWhite"
+            android:layout_weight="1"
+            android:gravity="center"
+            />
+
+        <TextView
+            android:id="@+id/Winery3"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/closeToWhite"
+            android:textSize="13dp"
+            android:gravity="center"
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+                android:id="@+id/LL2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+
+
+                <TextView
+                    android:id="@+id/Winery4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="320dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/closeToWhite"
+                    android:paddingEnd="30dp"
+                    />
+
+                <TextView
+                    android:id="@+id/Winery5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="320dp"
+                    android:layout_weight="1"
+                    android:text=""
+                    android:textColor="@color/closeToWhite" />
+
+
+    </LinearLayout>
+
+
+</FrameLayout>

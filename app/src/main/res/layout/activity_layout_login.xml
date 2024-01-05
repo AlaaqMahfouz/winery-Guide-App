@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".layout_login">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizental2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="48dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_Vertical2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/logInCard"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        style="@style/loginCard"
+        app:cardCornerRadius="@dimen/loginCardRadius"
+        android:elevation="5dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/loginViewsMargin"
+        android:layout_marginBottom="@dimen/loginViewsMargin"
+        android:background="@color/whiteCardColor"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizental2"
+        app:layout_constraintRight_toRightOf="parent"
+        >
+
+
+
+
+
+        <LinearLayout
+            style="@style/linearParent"
+            android:layout_gravity="center"
+            android:padding="@dimen/loginViewsMargin"
+            android:background="@color/closeToBlack"
+            >
+
+            <TextView
+                style="@style/headerTextPrimary"
+                android:text="Login"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:textColor="@color/black"
+                android:textSize="40dp"
+                />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputEmail"
+                style="@style/parent"
+                android:layout_marginTop="@dimen/loginViewsMargin">
+                <EditText
+                    android:id="@+id/editTextEmail"
+                    style="@style/modifiedEditText"
+                    android:inputType="textEmailAddress"
+                   android:textColorHint="@color/white"
+                    android:maxLines="1"
+                    android:hint="@string/login_email_hint"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/textInputPassword"
+                style="@style/parent"
+                android:layout_marginTop="@dimen/loginViewsMargin">
+                <EditText
+                    android:id="@+id/editTextPassword"
+                    style="@style/modifiedEditText"
+                    android:hint="@string/login_password_hint"
+                    android:maxLines="1"
+                    android:inputType="textPassword"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                style="@style/viewParent"
+                android:id="@+id/changePassButton"
+                android:text="Forgot Password?"
+                android:textColor="@color/darkblue"
+                android:textSize="@dimen/newsMoreTextSize"
+                android:layout_gravity="end"
+                android:onClick="viewForgotPAssword"
+                android:layout_marginTop="10dp"/>
+
+            <Button
+                android:id="@+id/cirLoginButton"
+                style="@style/loginButton"
+                android:text="Continue"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/loginViewsMargin"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:background="@color/transparent"
+                />
+
+            <TextView
+                android:id="@+id/toRegister"
+                style="@style/parent"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/darkblue"
+                android:text="@string/login_signup_hint"
+                android:onClick="viewRegisterClicked"
+                android:layout_marginTop="@dimen/loginViewsMargin"/>
+
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

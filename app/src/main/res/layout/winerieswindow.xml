@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context=".homePageWindow">
+
+
+
+
+    <ImageView
+        android:id="@+id/clickableImage1"
+        android:layout_width="330dp"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="150dp"
+        android:elevation="1dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="25sp" />
+
+
+    <LinearLayout
+        android:id="@id/LL"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        >
+
+        <TextView
+            android:id="@+id/Service1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:elevation="1dp"
+            android:text=""
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/Service2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text=""
+            android:textSize="15dp"
+            android:textColor="@color/white"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:id="@+id/Service3"
+            android:layout_width="38dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="15dp"
+            android:gravity="center"
+            android:textStyle="bold"
+
+            />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/LL2"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="160dp"
+        >
+
+
+        <Button
+            android:id="@+id/Register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:text="Regsiter" />
+
+        <Button
+            android:id="@+id/Trip"
+            android:fontFamily="sans-serif"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:text="Start A Trip" />
+
+
+    </LinearLayout>
+
+
+</FrameLayout>
