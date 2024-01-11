@@ -1,0 +1,2 @@
+Winery Guide App , is a an android app project , consistes of an app for reservations and trips about wineries in lebanon distributed in different regions around lebanon .
+the app focuses on the ability to mentain a friendly interactive app , that could lead the user easily to satisfy his needs. the project was done in short duration for a Uni project request. I used Java (for backend) , XML ( frontend) with the use of no-sql database : Firestore.
