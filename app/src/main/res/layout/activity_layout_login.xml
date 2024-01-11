@@ -62,12 +62,14 @@
                 style="@style/parent"
                 android:layout_marginTop="@dimen/loginViewsMargin">
                 <EditText
-                    android:id="@+id/editTextEmail"
+                    android:id="@+id/emailLogin"
                     style="@style/modifiedEditText"
+                    android:required="true"
                     android:inputType="textEmailAddress"
                    android:textColorHint="@color/white"
                     android:maxLines="1"
-                    android:hint="@string/login_email_hint"/>
+                    android:hint="@string/login_email_hint"
+                    android:textColor="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -75,25 +77,17 @@
                 style="@style/parent"
                 android:layout_marginTop="@dimen/loginViewsMargin">
                 <EditText
-                    android:id="@+id/editTextPassword"
+                    android:id="@+id/passwordLogin"
                     style="@style/modifiedEditText"
                     android:hint="@string/login_password_hint"
                     android:maxLines="1"
-                    android:inputType="textPassword"/>
+                    android:inputType="textPassword"
+                    android:textColor="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                style="@style/viewParent"
-                android:id="@+id/changePassButton"
-                android:text="Forgot Password?"
-                android:textColor="@color/darkblue"
-                android:textSize="@dimen/newsMoreTextSize"
-                android:layout_gravity="end"
-                android:onClick="viewForgotPAssword"
-                android:layout_marginTop="10dp"/>
 
             <Button
-                android:id="@+id/cirLoginButton"
+                android:id="@+id/Login"
                 style="@style/loginButton"
                 android:text="Continue"
                 android:layout_gravity="center_horizontal"

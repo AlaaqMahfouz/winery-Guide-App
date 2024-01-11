@@ -151,8 +151,6 @@ public  class WineriesPage extends AppCompatActivity {
 
                                                                 wineryNames.add(document.getId());
 
-                                                                Log.d("MyApp","document name = " + document.getId());
-
                                                                 // services collection
                                                                 servicesRef = document.getReference().collection("Services");
 

@@ -30,8 +30,9 @@
             android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Change Date"
-            android:layout_marginStart="100dp"
+            android:text="Select"
+            android:gravity="center"
+            android:layout_marginStart="120dp"
             android:elevation="100dp"
             />
 

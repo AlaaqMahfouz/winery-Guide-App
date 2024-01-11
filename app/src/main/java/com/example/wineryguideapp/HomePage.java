@@ -30,7 +30,6 @@ public  class HomePage extends AppCompatActivity {
 
 
 
-    // pageNum for indicating which page is currently open
 
     // storing the pages of Regions
     ArrayList<String> mainActivities;
@@ -45,19 +44,20 @@ public  class HomePage extends AppCompatActivity {
     View frameLayout;
 
     private final FirebaseFirestore db = FirebaseFirestore.getInstance();
-   private CollectionReference regionRef = db.collection("Regions");
+
+     private CollectionReference regionRef = db.collection("Regions");
 
     private CollectionReference dataRef = db.collection("Data");
 
     private DocumentReference userRef = dataRef.document("User");
 
    //reference which document in the firestore database to be shown
-   public DocumentSnapshot DocumentToShow;
+    public DocumentSnapshot DocumentToShow;
 
    // the num of the collections
    public int collectionsCount;
 
-
+    // index for the iterating over regions
    public int currentCollection=0;
 
    // store wineries per region
@@ -92,9 +92,8 @@ public  class HomePage extends AppCompatActivity {
                     imagePathPerRegion = new HashMap<>();
 
                     DocumentToShow= queryDocumentSnapshots.getDocuments().get(currentCollection);
-
+                    // region name
                     region = DocumentToShow.getId();
-
 
                     fillWineriesPerRegions();
 
@@ -208,7 +207,7 @@ public  class HomePage extends AppCompatActivity {
 
 
                 }
-
+                // show a fragment with winery name , image and services
                 showFragment(homePageWindow.newInstance(region,wineriesPerRegions.get(region),imagePathPerRegion.get(region)));
 
 
@@ -228,14 +227,11 @@ public  class HomePage extends AppCompatActivity {
         if(currentCollection<collectionsCount-1) {
 
             currentCollection++;
-            Log.d("MyApp","up");
 
         }
         else
         {
             currentCollection=0;
-
-
         }
 
 
@@ -244,11 +240,13 @@ public  class HomePage extends AppCompatActivity {
             @Override
             public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
 
+                // the new region doc
                 DocumentToShow= queryDocumentSnapshots.getDocuments().get(currentCollection);
 
+                // the new region name
                 region = DocumentToShow.getId();
 
-                // show the next fragment
+                // show the next fragment with the updatet wineries , image and name
                 showFragment(homePageWindow.newInstance(region,wineriesPerRegions.get(region),imagePathPerRegion.get(region)));
 
             }
@@ -263,7 +261,6 @@ public  class HomePage extends AppCompatActivity {
         if(currentCollection>0)
         {
             currentCollection--;
-            Log.d("MyApp","down");
         }
 
         else
@@ -280,7 +277,7 @@ public  class HomePage extends AppCompatActivity {
 
                 region = DocumentToShow.getId();
 
-                // show the next of previous fragment
+                // show the next fragment
                 showFragment(homePageWindow.newInstance(region,wineriesPerRegions.get(region),imagePathPerRegion.get(region)));
 
             }
@@ -320,9 +317,9 @@ public  class HomePage extends AppCompatActivity {
     public class parentFrameView extends View implements GestureDetector.OnGestureListener {
 
 
-        int minDistance = 150;
+            int minDistance = 150;
 
-        private GestureDetector gestureDetector;
+            private GestureDetector gestureDetector;
 
 
         public parentFrameView(Context context) {

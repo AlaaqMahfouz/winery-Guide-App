@@ -85,7 +85,7 @@
 
     <LinearLayout
         android:id="@+id/LL2"
-        android:layout_width="330dp"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:layout_gravity="center"
@@ -99,16 +99,10 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@color/transparent"
-            android:text="Regsiter" />
+            android:text="Regsiter"
+            android:layout_gravity="center"
+            />
 
-        <Button
-            android:id="@+id/Trip"
-            android:fontFamily="sans-serif"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/transparent"
-            android:text="Start A Trip" />
 
 
     </LinearLayout>

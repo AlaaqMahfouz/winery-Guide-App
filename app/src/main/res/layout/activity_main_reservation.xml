@@ -87,19 +87,20 @@
         app:layout_constraintGuide_percent="0.28" />
 
 
-
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/cardView"
-        android:layout_width="match_parent"
+        android:layout_width="330dp"
         android:layout_height="500dp"
         android:checkable="true"
         android:clickable="true"
         android:focusable="true"
         app:cardBackgroundColor="@color/closeToBlack2"
-        app:layout_constraintBottom_toTopOf="@+id/LL2"
-        app:layout_constraintTop_toBottomOf="@+id/LL2"
-        app:layout_constraintVertical_bias="0.5">
-
+        app:layout_constraintBottom_toBottomOf="@id/guideline_horizental2"
+        app:layout_constraintEnd_toStartOf="@+id/LL2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/LL2"
+        app:layout_constraintTop_toTopOf="@id/search_view"
+        android:layout_marginTop="170dp">
 
 
         <LinearLayout
@@ -112,19 +113,17 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:text="Enter the number of people willing to reserve :"
-                android:textColor="@color/white"
-                android:textSize="20sp"
                 android:layout_gravity="center"
-                />
+                android:layout_weight="1"
+                android:text="Enter Group Number"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/textField"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                >
+                android:layout_weight="1">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/peopleNum"
@@ -132,42 +131,32 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:inputType="number"
+                    android:textColor="@color/white"
+
                     />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="select the date of your Reservation :"
-                android:textColor="@color/white"
-                android:layout_gravity="center"
-                android:layout_weight="1"
-                android:textSize="20sp"
-                />
 
             <Button
                 android:id="@+id/selectDate"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="select Date"
                 android:layout_gravity="center"
-                />
-
-
+                android:text="select Date" />
 
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:paddingBottom="15dp"
-                android:text="Select services to reserve :"
-                android:textColor="@color/white"
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:buttonTint="@color/white"
-                android:textSize="20sp"
-                />
+                android:gravity="center"
+                android:paddingBottom="15dp"
+                android:text="Select services to reserve :"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
 
             <CheckBox
                 android:id="@+id/service1box"
@@ -203,10 +192,9 @@
                 android:id="@+id/confirm"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Confirm"
                 android:layout_gravity="center"
                 android:backgroundTint="@color/closeToBlack"
-                />
+                android:text="Confirm" />
 
         </LinearLayout>
 
@@ -220,28 +208,18 @@
         android:layout_height="70dp"
         app:cardBackgroundColor="#2B2626"
         app:layout_constraintBottom_toBottomOf="@id/LL2"
-        app:layout_constraintLeft_toLeftOf="@id/guideline_Vertical2" />
+        app:layout_constraintLeft_toLeftOf="@id/guideline_Vertical2">
 
 
-    <ImageButton
-        android:id="@+id/profileButtonImage"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/user"
-        android:elevation="100dp"
-        app:layout_constraintRight_toRightOf="@id/guideline_Vertical"
-        app:layout_constraintTop_toTopOf="@id/card2" />
+        <ImageButton
+            android:id="@+id/profileButtonImage"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="@drawable/user"
+            android:elevation="100dp" />
 
-    <ImageButton
-        android:id="@+id/settingsButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:background="@drawable/settings"
-        android:elevation="100dp"
-        app:layout_constraintLeft_toLeftOf="@id/guideline_Vertical2"
-        app:layout_constraintTop_toTopOf="@id/card2" />
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

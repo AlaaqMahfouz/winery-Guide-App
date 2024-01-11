@@ -31,8 +31,6 @@ public class receiptPage extends AppCompatActivity {
 
     TextView wineryNameText;
 
-    TextView servicesText;
-
     TextView dateText;
 
     TextView spots;
@@ -40,8 +38,6 @@ public class receiptPage extends AppCompatActivity {
     TextView totalCost;
 
     Button doneButton;
-
-    ArrayList<String> checkedServices;
 
     FirebaseFirestore db=FirebaseFirestore.getInstance();
 
@@ -64,13 +60,8 @@ public class receiptPage extends AppCompatActivity {
 
         Intent i = getIntent();
 
+        // get te id of the new made document in reservation
        newReservationId= i.getStringExtra("new reservation");
-
-        assert newReservationId != null;
-        newReservationDoc=reservationRef.document(newReservationId);
-
-
-
 
 
         userNameText =findViewById(R.id.userName);
@@ -87,6 +78,13 @@ public class receiptPage extends AppCompatActivity {
         totalCost=findViewById(R.id.TotalCost);
 
         doneButton=findViewById(R.id.done);
+
+
+       // check if its null
+        assert newReservationId != null;
+
+        newReservationDoc=reservationRef.document(newReservationId);
+
 
         doneButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -119,6 +117,7 @@ public class receiptPage extends AppCompatActivity {
                     }
                 });
 
+                // get date and trasnform it to well formated string for display purposes
                 Date date = documentSnapshot.getTimestamp("Due-Date").toDate();
 
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
@@ -130,10 +129,11 @@ public class receiptPage extends AppCompatActivity {
 
                 spots.setText( documentSnapshot.get("Spots").toString());
 
-                totalCost.setText( documentSnapshot.get("Total Cost").toString());
+                totalCost.setText( (documentSnapshot.get("Total Cost").toString()) + "$");
 
                 services = (ArrayList<String>) documentSnapshot.get("Services");
 
+                // fill services in array list inside the list view
                 adapter = new ArrayAdapter<>(receiptPage.this,R.layout.list_item, services);
 
                 servicesList.setAdapter(adapter);

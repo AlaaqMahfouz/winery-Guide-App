@@ -101,7 +101,7 @@
         app:layout_constraintBottom_toBottomOf="@id/LL"
         app:layout_constraintLeft_toLeftOf="@id/guideline_Vertical2"
         app:cardBackgroundColor="#2B2626"
-        />
+        >
 
 
     <ImageButton
@@ -109,23 +109,12 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/user"
-        app:layout_constraintTop_toTopOf="@id/card2"
-        android:layout_marginTop="10dp"
-        app:layout_constraintRight_toRightOf="@id/guideline_Vertical"
         android:elevation="100dp"
+        android:layout_gravity="center"
         />
 
-    <ImageButton
-        android:id="@+id/settingsButton"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:background="@drawable/settings"
-        app:layout_constraintTop_toTopOf="@id/card2"
-        android:layout_marginTop="10dp"
-        app:layout_constraintLeft_toLeftOf="@id/guideline_Vertical2"
-        android:elevation="100dp"
-        />
 
+    </androidx.cardview.widget.CardView>
 
 
 

@@ -1,7 +1,6 @@
 package com.example.wineryguideapp;
 
 import static androidx.core.content.ContextCompat.startActivity;
-import static com.example.wineryguideapp.FirestoreFetcher.task;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -246,9 +245,8 @@ public class mainReservation extends AppCompatActivity {
 
 
 
-                   fetcher.FetchDocByDate(peopleNum,currentWineryName,date,checkedServices,region,materialCardView.getContext());
+                   fetcher.updateFirestore(peopleNum,currentWineryName,date,checkedServices,region,materialCardView.getContext());
 
-//                    checkedServices.clear();
 
                     }
                 });

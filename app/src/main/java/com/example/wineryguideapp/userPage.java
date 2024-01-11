@@ -120,7 +120,6 @@ public class userPage extends AppCompatActivity {
         Back.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                Log.d("MyApp","finished..");
                 finish();
             }
         });

@@ -59,7 +59,9 @@
                     style="@style/modifiedEditText"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:hint="Name"/>
+                    android:hint="Name"
+                    android:textColor="@color/white"
+                    />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -70,7 +72,8 @@
                     style="@style/modifiedEditText"
                     android:inputType="text"
                     android:maxLines="1"
-                    android:hint="Mobile Number"/>
+                    android:hint="Mobile Number"
+                    android:textColor="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -81,7 +84,8 @@
                     style="@style/modifiedEditText"
                     android:inputType="textEmailAddress"
                     android:maxLines="1"
-                    android:hint="@string/login_email_hint"/>
+                    android:hint="@string/login_email_hint"
+                    android:textColor="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -92,7 +96,8 @@
                     style="@style/modifiedEditText"
                     android:hint="@string/login_password_hint"
                     android:maxLines="1"
-                    android:inputType="textPassword"/>
+                    android:inputType="textPassword"
+                    android:textColor="@color/white"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
@@ -104,6 +109,8 @@
                 android:textSize="20sp"
                 android:layout_width="150dp"
                 android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/transparent"
                 />
 
             <TextView

@@ -58,8 +58,6 @@ public class WineriesWindow extends Fragment {
 
     private Button registerButton;
 
-    private Button tripButton;
-
     public WineriesWindow() {
         // Required empty public constructor
     }
@@ -109,7 +107,6 @@ public class WineriesWindow extends Fragment {
         servicesView[1]=view.findViewById(R.id.Service2);
         servicesView[2]=view.findViewById(R.id.Service3);
 
-        tripButton = view.findViewById(R.id.Trip);
 
         registerButton = view.findViewById(R.id.Register);
 

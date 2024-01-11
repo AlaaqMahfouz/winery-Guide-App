@@ -85,10 +85,6 @@
                         android:id="@+id/registerLayout"
                         layout="@layout/activity_layout_register"/>
 
-                    <include
-                        android:id="@+id/changePassLayout"
-                        android:visibility="gone"
-                        layout="@layout/activity_change_pass"/>
 
                 </LinearLayout>
                 <ImageView

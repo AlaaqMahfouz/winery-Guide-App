@@ -32,7 +32,6 @@ public class homePageWindow extends Fragment {
 
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
     private static final String ARG_PARAM3="param3";
 
     private String regionName;
@@ -69,6 +68,7 @@ public class homePageWindow extends Fragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        // get arguments
         if (getArguments() != null) {
             regionName = getArguments().getString(ARG_PARAM1);
             wineriesList = getArguments().getStringArrayList(ARG_PARAM2);
@@ -133,7 +133,7 @@ public class homePageWindow extends Fragment {
             @Override
             public void onFailure(@NonNull Exception exception) {
                 // Log the error or display a user-friendly message
-                Log.e("MyApp", "Error downloading image:", exception);
+                Log.d("MyApp", "Error downloading image:", exception);
             }
         });
     }
