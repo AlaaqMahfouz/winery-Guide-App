@@ -135,7 +135,7 @@
                         if (!found) {  // no document with the chosen date exist
 
                             if(peopleNum <= maxCapacity[0])
-                            {
+                            {   Log.d("MyApp","");
                                 Map<String, Object> data = new HashMap<>();
                                 data.put("Date", new Timestamp(date.toDate()));
                                 data.put("Spots", peopleNum);
